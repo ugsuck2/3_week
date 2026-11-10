@@ -60,3 +60,10 @@ const getMealByTime3=(realtime)=> {
     }
 }    
 console.log('출력값 :'+' '+getMealByTime3(18)); 
+console.log(getMealByTime1(5)); //출력값 : 금식
+console.log(getMealByTime2(8)); //출력값 : 아침
+console.log(getMealByTime3(13)); //출력값 : 점심
+console.log(getMealByTime3(16)); //출력값 : 금식
+console.log(getMealByTime2(19)); //출력값 : 저녁
+console.log(getMealByTime1(22)); //출력값 : 야식
+console.log(getMealByTime1(2)); //출력값 : 금식
