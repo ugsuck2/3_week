@@ -12,6 +12,9 @@ function calculateOrder(price, grade) {
     else if (grade == 'BRONZE') {
         lastPrice = price;
     }
+    else {
+        lastPrice = price;
+    }
     
     let bonus = 0;
     for (let i=1; i<=(lastPrice/100000);i++) {
@@ -21,4 +24,4 @@ function calculateOrder(price, grade) {
     console.log(bonus);
 }
 
-calculateOrder(500000,'VIP');
+calculateOrder(1000000,'VIP');
