@@ -25,7 +25,7 @@ for(i=4;i>=0;i--) {
 //문제 5. [for...in]
 let fruits = ['사과', '바나나', '포도', '딸기'];
 for(let i in fruits){
-    console.log(fruits[i]);
+    console.log(i);
 }
 
 //문제 6. [for...in]
@@ -37,7 +37,7 @@ for(let i in fruits6) {
 
 //문제 7. [for...of]
 let prices = [1000, 2000, 3000, 4000];
-for(let i of prices) {
+for(let i of prices) {   //let value, item, v, prive로 쓴다
     console.log(i);
 }
 
