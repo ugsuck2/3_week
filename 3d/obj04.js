@@ -2,6 +2,8 @@
 
 // js 배열 관련 함수
 
+// const { useState } = require("react");
+
 // 기본배열
 let arr = [10,20,30,40];
 
@@ -110,3 +112,62 @@ console.log(result11);
 
 if(result11==-1)
     console.log('못찾았다. 그런거없다.');
+
+
+//--------------------------------------------------------
+
+// 구조 분해 할당(Destructuring Assignment)
+
+let arr2 = [10,20,30];
+
+console.log(arr2);
+console.log(arr2[2]);
+
+let [n1,n2,n3] = [77,88,99];
+console.log(n1,n2,n3);
+//console.log(n1[1]); 이미 기본 숫자형 데이터인 상태 (배열x)
+
+let [num,setNum] = [123,456];
+
+function func1() {
+    console.log('func1() 함수 호출');
+}
+func1();
+
+let [v, f] = [50, func1];
+console.log(v);
+console.log(f);
+f();
+
+let obj = {
+    num1 : 30,
+    num2 : 50
+};
+console.log(obj.num1);
+console.log(obj.num2);
+
+let obj2 = obj;
+
+console.log(obj2.num1);
+console.log(obj2.num2);
+
+let {num1,num2} = obj;
+console.log(num1,num2);
+
+
+//------------------------------------------------
+
+
+let [count, setCount] = useState(0);
+
+function useState( n ) {
+    let v = n;
+
+    function setV( input ){    //set함수
+        v = input;
+    }
+    return [v,setV]
+}
+console.log(count);
+setCount(10);
+console.log(count);
