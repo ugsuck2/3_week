@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*css코드*/
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: forestgreen;
+        }
+
+        .box-bgcolor {
+            background-color: darkmagenta;
+        }
+
+        .font-white {
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div></div>
+
+    <h1 id="target">이벤트 등록</h1>
+
+    <button onclick="event1()">이벤트 버튼1</button>
+
+    <button class="evt-btn" id="btn-evt2">이벤트 버튼2</button>
+
+    <button class="evt-btn" id="btn-evt3">이벤트 버튼3</button>
+
+    <div id="box" class="box-bgcolor">박스 div</div>
+
+    <script>
+        // js코드
+    
+        // js 기준 선택자
+    document.getElementById('target');                  //id선택자
+    document.getElementsByClassName("evt-btn");         //class 선택자
+    document.querySelector('#box');                //css 선택자 문법으로 요소를 선택
+    document.querySelectorAll('.evt-btn');      //css 선텍자 문법으로 요소 여러개를 선택
+
+        // 1) 함수를 직접 속성에 연결
+        function event1(){
+            console.log('event1() 호출됨')
+            // document.getElementById('target').textContent = '이벤트 등록1에서 변경함';
+            // document.getElementById('target').style.color = 'red'  ;
+            const h1_target = document.getElementById('target'); 
+            h1_target.textContent = '이벤트 등록1에서 변경함';
+            h1_target.style.color = 'red'  ;
+            h1_target.style.fontSize = '36px'  ;
+            document.getElementById('box').style.backgroundColor = 'forestgreen'
+
+        }
+
+        // 2) js에서 함수를 대입
+
+        function event2(){
+        console.log('event2() 호출됨');
+        const h1_target = document.querySelector('#target'); 
+        h1_target.textContent = '이벤트 등록2 from event2()';
+        }
+
+        document.getElementById('btn-evt2').onclick = event2
+        // 3) addEventListener
+
+        const btn_evt3 = document.getElementById('btn-evt3');
+
+        const event3 = ()=>{
+            console.log('event3() 호출됨');
+            document.getElementById('target').textContent = '이벤트3에서 변경됨'
+            document.getElementById('target').style.fontSize = '56px'
+            document.getElementById('target').style.color = 'purple'
+            
+        }
+        btn_evt3.addEventListener('click',event3);
+        //이벤트등록                무슨이벤트  어떤함수를 실행
+
+        btn_evt3.addEventListener('dblclick',()=>{
+            // a href = 'naver.com'
+            location.href = 'https://www.naver.com' ; //js 코드로 페이지 이동 발생
+        })
+
+        document.getElementById('box').addEventListener('click',()=>{
+            console.log('box가 click 됨');
+            document.getElementById('box').style.backgroundColor = 'skyblue'
+            // document.getElementById('box').classList.add     :클래스 추가
+            // document.getElementById('box').classList.remove  :클래스 삭제
+            // document.getElementById('box').classList.toggle  :클래스 on/off (추가/삭제)
+            
+            document.getElementById('box').classList.toggle('font-white');
+        })
+    </script>
+</body>
+</html>
