@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #target-box { background-color: brown;
+                  width: 500px;
+                  height: 500px;}
+    
+
+  </style>
+</head>
+<body>
+  <div>
+    <input type="button" id="color-btn">
+    <div id="target-box"></div>
+  </div>
+  <script>
+    
+    const colorBtn = document.getElementById('color-btn');
+    const targetBox = document.getElementById('target-box');
+    function btn() {
+    targetBox.style.backgroundColor = 'blue';
+    }
+    colorBtn.onclick = btn;
+  </script>
+</body>
+</html>

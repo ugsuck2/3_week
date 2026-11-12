@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #coord-area {
+      width: 1000px;
+      height: 1000px;
+      box-sizing: border-box;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div id="coord-area">
+
+  </div>
+  <span id="coord-text">0,0</span>
+
+  <script>
+    const coordArea = document.getElementById('coord-area');
+    const coordText = document.getElementById('coord-text');
+    coordArea.addEventListener('mousemove',(event)=>{
+      let x = event.offsetX;
+      let y = event.offsetY;
+
+      coordText.textContent = `박스 안에서의 위치 - X: ${x}, Y: ${y}`
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <input type="text" id="user-input">
+    <button id="submit-btn" type="submit"></button>
+    <ul id="my-list">
+      <li>내용추가</li>
+    </ul>
+
+  </div>
+  <script>
+    const userInput = document.getElementById('user-input');
+    const submitBtn = document.getElementById('submit-btn');
+    const myList = document.getElementById('my-list');  // 부모 요소 미리찾기
+    
+    userInput.addEventListener('keydown',(event)=> {
+      if(event.key=='Enter') {
+          let text = userInput.value;
+
+          if (text === '') return;
+          // 2. 만든 <li> 안에 들어갈 텍스트 내용 채워주기
+          const newLi = document.createElement('li');
+          newLi.textContent = text;
+          // 3. <li>를 감싸고 있는 부모 요소(예: <ul> 또는 <ol>)를 선택해서 자식으로 붙여넣기
+          
+          myList.appendChild(newLi);
+          userInput.value = '';
+          }
+          })
+
+    
+  </script>
+</body>
+</html>
