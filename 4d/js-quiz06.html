@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="up">
+        <span style="font-size: 36px;" id="ment">달식당</span> <span id='heart' style="font-size: 36px;">좋아요♡</span><span id="plus" style="font-size: 36px;">0</span>
+    </div>
+    <script>
+        const div_up = document.getElementById('heart');
+        const span_plus = document.getElementById('plus');
+
+        div_up.addEventListener('click',()=>{
+            let number = parseInt(span_plus.innerText) //span_plus  즉 span 태그에 있는 '0'을 가져와서 숫자 0 으로 바꾼다
+            //parseInt() 함수는 문자열(String)을 정수(Integer, 소수점이 없는 정수)로 변환해 주는 내장 함수
+            span_plus.innerText = number + 1;  //<div id='up'>부분을 클릭하면 해당 텍스트에 1을 더한다.
+                if(span_plus.innerText>=30)
+                    div_up.innerText = '좋아요💖'
+        })
+
+
+    </script>
+</body>
+</html>
