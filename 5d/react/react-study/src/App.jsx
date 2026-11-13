@@ -3,14 +3,14 @@ import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
-import Basic01 from './components/Basic01.jsx'
+import State01 from './components/State01.jsx'
 
 function App() {
-  
 
-  return (
-    
-        <Basic01/>
+
+    return (
+        // <Basic01/>
+        <State01/>
     
         )
     }
