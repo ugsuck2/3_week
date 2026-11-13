@@ -11,7 +11,7 @@ function Basic01(){
         hello3 = '안녕'
     }
     else {
-        hello3 = '잘가'
+        hello3 = '잘가 b'
     }
 
     let flag = false;
@@ -61,6 +61,8 @@ function Basic01(){
             {
                 flag == false && <p>flag == false && {hello2}</p>
             }
+
+            <h3 style={{color : 'bule',fontSize : '26px'}}>{himsg}</h3>
 
         </div>
     )
