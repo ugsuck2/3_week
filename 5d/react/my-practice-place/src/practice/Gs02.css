@@ -1,0 +1,61 @@
+.mainBox {
+            width: 500px;
+            background-color: #0e8a80;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+        .mainBox .top_message {
+            margin: 20px auto;
+            justify-content: center;
+            
+        }
+        .mainBox .top_message p{
+            color: white;
+            display: flex;
+            justify-content: center;
+            font-size: 30px;
+            
+        }
+        .mainBox .email  {
+            
+            
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+        }
+        .mainBox input {
+            width: 90%;  
+            height: 30px;               
+            box-sizing: border-box;               
+            display: block;               
+            margin: 30px auto;
+            background-color: #0e8a80;
+            border: 1px solid white;
+        }
+        .mainBox input::placeholder {
+            color: #e48080; 
+            opacity: 1;     
+        }
+        .mainBox .password  {
+            
+            
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+        }
+        .mainBox .loginButton {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 30px;
+        }
+        .mainBox .loginButton button{
+            width: 90%;
+            height: 60px;
+            box-sizing: border-box;               
+            display: block;    
+            justify-content: center;
+            background-color: rgb(96, 218, 96);  
+            font-size: 20px;
+            font-weight: bold;
+            color: white;       
+        }

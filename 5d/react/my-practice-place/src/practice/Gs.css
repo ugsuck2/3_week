@@ -1,0 +1,12 @@
+.center {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.center h1 {
+  color: blueviolet;
+}

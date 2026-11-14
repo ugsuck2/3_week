@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main.html</title>
+    <style>
+        * {
+            margin: 0;   
+            padding: 0;  
+            box-sizing: border-box; 
+        }
+        table {
+            width: 1000px;
+            margin: 0 auto; 
+            border-collapse: collapse;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+        th, td {
+            border: none; 
+            border-bottom: 1px solid #ddd; 
+            padding: 10px;
+        }
+        .mainBox {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 5px; 
+        }
+        .pagination button {
+            padding: 5px 12px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .pagination button.active {
+            background-color: #333; 
+            color: #fff;           
+            border-color: #333;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="mainBox">
+        <table>
+            <tr style="height: 50px;">
+                <th colspan="12">제목</th>
+                <th colspan="2">작성자</th>
+                <th colspan="2">작성일</th>
+                <th colspan="2">조회수</th>
+                <th colspan="2">좋아요</th>
+            </tr>
+            <tr>
+                <td colspan="12">37 &nbsp;&nbsp;&nbsp;&nbsp;     01.웹 솔루션 구축(I)-평가지-박민호</td>
+                <td colspan="2">박민호</td>
+                <td colspan="2">2016.01.06</td>
+                <td colspan="2">3</td>
+                <td colspan="2">0</td>
+            </tr>
+            <tr>
+                <td colspan="12">35 &nbsp;&nbsp;&nbsp;&nbsp;      01.웹 솔루션 구축(I)-평가지-정현수</td>
+                <td colspan="2">정현수</td>
+                <td colspan="2">2016.01.06</td>
+                <td colspan="2">2</td>
+                <td colspan="2">0</td>
+            </tr>
+            <tr>
+                <td colspan="12">32 &nbsp;&nbsp;&nbsp;&nbsp;      01.웹 솔루션 구축(I)-평가지-송상민</td>
+                <td colspan="2">송상민</td>
+                <td colspan="2">2016.01.05</td>
+                <td colspan="2">3</td>
+                <td colspan="2">0</td>
+            </tr>
+            <tr>
+                <td colspan="12">29 &nbsp;&nbsp;&nbsp;&nbsp;      01.웹 솔루션 구축(I)-평가지-강정석</td>
+                <td colspan="2">강정석</td>
+                <td colspan="2">2016.01.05</td>
+                <td colspan="2">2</td>
+                <td colspan="2">0</td>
+            </tr>
+            <tr>
+                <td colspan="12">27 &nbsp;&nbsp;&nbsp;&nbsp;      01.웹 솔루션 구축(I)-평가지-김민권</td>
+                <td colspan="2">김민권</td>
+                <td colspan="2">2016.01.05</td>
+                <td colspan="2">2</td>
+                <td colspan="2">0</td>
+            </tr>
+            <tr>
+                <td colspan="12">26 &nbsp;&nbsp;&nbsp;&nbsp;      01.웹 솔루션 구축(I)-평가지-송종한</td>
+                <td colspan="2">송종한</td>
+                <td colspan="2">2016.01.05</td>
+                <td colspan="2">3</td>
+                <td colspan="2">0</td>
+            </tr>
+            <tr>
+                <td colspan="12">23 &nbsp;&nbsp;&nbsp;&nbsp;      01.웹 솔루션 구축(I)-평가지-최찬솔</td>
+                <td colspan="2">최찬솔</td>
+                <td colspan="2">2016.01.05</td>
+                <td colspan="2">3</td>
+                <td colspan="2">0</td>
+            </tr>
+            <tr>
+                <td colspan="12">22 &nbsp;&nbsp;&nbsp;&nbsp;      01.웹 솔루션 구축(I)-평가지-최서우</td>
+                <td colspan="2">최서우</td>
+                <td colspan="2">2016.01.05</td>
+                <td colspan="2">1</td>
+                <td colspan="2">0</td>
+            </tr>
+            <tr>
+                <td colspan="12">21 &nbsp;&nbsp;&nbsp;&nbsp;      01.웹 솔루션 구축(I)-평가지-김민주</td>
+                <td colspan="2">김민주</td>
+                <td colspan="2">2016.01.05</td>
+                <td colspan="2">2</td>
+                <td colspan="2">0</td>
+            </tr>
+            <tr>
+                <td colspan="12">19 &nbsp;&nbsp;&nbsp;&nbsp;    01.웹 솔루션 구축(I)-평가지-강유빈</td>
+                <td colspan="2">강유빈</td>
+                <td colspan="2">2016.01.05</td>
+                <td colspan="2">3</td>
+                <td colspan="2">0</td>
+            </tr>
+
+        </table>
+        <br><br><br><br><br>
+        <button type="button">1</button>
+
+    </div>
+    <div class="pagination">
+        <button type="button" class="active">1</button>
+        <button type="button">2</button>
+    </div>    
+</body>
+</html>

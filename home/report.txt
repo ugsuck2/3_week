@@ -1,0 +1,88 @@
+
+  기본타입변수 : 변수에 값 자체가 저장됨
+  ex) let a = 10;
+  변수에 숫자, 문자열, true or false, 함수, 아무것도 지정안함(undefined)을 저장함.
+
+
+  참조타입변수 : 객체나 배열처럼 여러 데이터 또는 속성을 관리하는 데이터
+  ex) 
+      객체    { name: '유광석' }
+      배열    [10, 20, 30]
+      함수    function hello() {}
+      날짜    new Date()
+
+  참조타입변수는 기본타입변수와 다르게 주소를 갖는다.
+  let a = 10
+  let b = a
+  b = 20
+  
+  하면  a = 10, b = 20 이다 하지만 참조타입변수는 다르게 작동한다.
+  let a = { name: '유광석' };
+  let b = a;
+
+  b.name = '김철수';
+
+  console.log(a.name); // 김철수
+  console.log(b.name); // 김철수
+
+  b = a를 실행했을 때 객체가 복사된 것이 아니라 같은 객체를 가리키게 되었기 때문
+
+  얕은복사와 깊은복사
+
+  1. 얕은 복사 (Shallow Copy)
+
+  겉에 있는 객체만 새로만든다.
+
+  예를들어 
+  const user1 = {
+  name: '철수',
+  age: 20,
+  address: {
+    city: '서울'
+  }
+  }; 라 하자
+
+  const user2 = { ...user1 };  여기서 ...은 중괄호를 벗긴다 이런의미다. 얕은복사할때 사용
+
+  user1과 user2는 겉으로는 서로 다른 객체지만, 내부에 있는 address는 같은 객체
+
+  // 이름 변경
+  user2.name = '광석';
+
+  // 도시 변경
+  user2.address.city = '천안';
+
+  console.log(user1.name);         // 철수
+  console.log(user1.address.city); // 천안
+
+  name은 문자열이기 때문에 복사본에서 변경해도 원본에 영향이 없다.
+  address는 내부 객체이기 때문에 원본과 복사본이 공유. 그래서 변경하면 원본에도 영향을 준다.
+
+
+  2. 깊은 복사 (Deep Copy)
+
+  깊은 복사는 겉에 있는 객체뿐 아니라 내부에 있는 객체까지 새롭게 복사
+
+  const user1 = {
+    name: '철수',
+    address: {
+      city: '서울'
+    }
+  };
+
+  // 깊은 복사
+  const user2 = structuredClone(user1);
+
+  이번에는 내부의 address까지 별도의 객체로 만들어짐.
+
+
+  user2.name = '영희';
+  user2.address.city = '부산';
+
+  console.log(user1.name);         // 철수
+  console.log(user1.address.city); // 서울
+
+  console.log(user2.name);         // 영희
+  console.log(user2.address.city); // 부산
+
+  리엑트와 연관지어서 얕은복사 하는게 햇갈림.
